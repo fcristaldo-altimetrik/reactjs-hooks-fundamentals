@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export const Field = ({ id, defaultValue, label, onBlur }) => {
   const [value, setValue] = useState(defaultValue || "");
+
   return (
     <div>
       <label htmlFor={id}>{label}</label>

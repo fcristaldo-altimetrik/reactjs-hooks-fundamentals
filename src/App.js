@@ -1,4 +1,5 @@
 import { Field } from "./components/Field";
+import { ClassField } from "./components/ClassField";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,12 @@ function App() {
         id={"name"}
         label={"Name"}
         defaultValue={"Facundo"}
+        onBlur={handleBlur}
+      />
+      <ClassField
+        id={"class-name"}
+        label={"Class Name"}
+        defaultValue={"Jose"}
         onBlur={handleBlur}
       />
     </div>
