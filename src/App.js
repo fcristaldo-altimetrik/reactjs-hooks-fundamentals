@@ -7,6 +7,8 @@ import reducers from "./reducers";
 //Components
 import { Counter } from "./components/Counter";
 import ClassCounter from "./components/ClassCounter";
+import { Buttons } from "./components/Buttons";
+import ClassButtons from "./components/ClassButtons";
 
 const store = createStore(reducers, {});
 
@@ -16,6 +18,8 @@ function App() {
       <div className="App">
         <Counter />
         <ClassCounter />
+        <Buttons />
+        <ClassButtons />
       </div>
     </Provider>
   );
