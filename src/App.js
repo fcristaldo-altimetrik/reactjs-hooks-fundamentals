@@ -1,21 +1,18 @@
-import logo from "./logo.svg";
+import { Field } from "./components/Field";
 import "./App.css";
 
 function App() {
+  const handleBlur = (event) => {
+    console.log("handleBlur value", event.currentTarget.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>ReackJS Hooks Fundamentals</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org/docs/hooks-intro.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More
-        </a>
-      </header>
+    <div className={"container"}>
+      <Field
+        id={"name"}
+        label={"Name"}
+        defaultValue={"Facundo"}
+        onBlur={handleBlur}
+      />
     </div>
   );
 }

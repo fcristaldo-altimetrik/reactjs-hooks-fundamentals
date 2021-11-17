@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Field = ({ id, defaultValue, label, onFocus }) => {
+export const Field = ({ id, defaultValue, label, onBlur }) => {
   const [value, setValue] = useState(defaultValue || "");
   return (
     <div>
@@ -8,7 +8,7 @@ export const Field = ({ id, defaultValue, label, onFocus }) => {
       <input
         id={id}
         value={value}
-        onFocus={onFocus}
+        onBlur={onBlur}
         onChange={(e) => setValue(e.currentTarget.value)}
       />
     </div>
