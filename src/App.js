@@ -1,22 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
+//Redux
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducers from "./reducers";
+//Components
+import { Counter } from "./components/Counter";
+import ClassCounter from "./components/ClassCounter";
+
+const store = createStore(reducers, {});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>ReackJS Hooks Fundamentals</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org/docs/hooks-intro.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Counter />
+        <ClassCounter />
+      </div>
+    </Provider>
   );
 }
 
